@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-pod-deployment-gcloud
+  namespace: apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-pod
+  template:
+    metadata:
+      labels:
+        app: test-pod
+    spec:
+      serviceAccountName: secure-java21-gsm-api
+      containers:
+      - name: google-cloud-sdk
+        image: google/cloud-sdk:latest
+        command: [ "sleep", "3600" ]  # Keeps the pod running
