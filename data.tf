@@ -9,8 +9,3 @@ data "google_compute_network_endpoint_group" "east4-neg" {
     zone="us-east4-c"
     project = var.project_id
 }
-
-provider "google" {
-#   impersonate_service_account = "project-factory@mtech-cloudservices-prj.iam.gserviceaccount.com"
-  project                     = var.project_id
-}
