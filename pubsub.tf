@@ -7,3 +7,4 @@ resource "google_pubsub_topic" "example" {
 
   message_retention_duration = "86600s"
 }
+
