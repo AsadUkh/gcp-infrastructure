@@ -10,7 +10,8 @@ terraform {
 provider "google" {
 #   impersonate_service_account = "terraform@gcp-hackathon-macys.iam.gserviceaccount.com"
   project                     = var.project_id
-  impersonate_service_account = "terraform@gcp-hackathon-macys.iam.gserviceaccount.com"
+
+  impersonate_service_account = "training-devops@gcp-hackathon-macys.iam.gserviceaccount.com"
     scopes = [
     "https://www.googleapis.com/auth/cloud-platform",
     "https://www.googleapis.com/auth/userinfo.email",
@@ -20,7 +21,7 @@ provider "google" {
 provider "google-beta" {
 #   impersonate_service_account = "terraform@gcp-hackathon-macys.iam.gserviceaccount.com"
   project                     = var.project_id
-  impersonate_service_account = "terraform@gcp-hackathon-macys.iam.gserviceaccount.com"
+  impersonate_service_account = "training-devops@gcp-hackathon-macys.iam.gserviceaccount.com"
     scopes = [
     "https://www.googleapis.com/auth/cloud-platform",
     "https://www.googleapis.com/auth/userinfo.email",
